@@ -116,11 +116,11 @@ nav {
 }
 
 .logo img {
-    height: 70px;
+    height: 35px;
     width: auto;
     display: block;
     object-fit: contain;
-    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4));
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.3));
 }
 
 .logo:hover {
