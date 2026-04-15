@@ -8,7 +8,7 @@ const UPCOMING_SHOWS = [
         title: "The Houston Showcase",
         date: "Friday, April 24 • 8:00 PM",
         description: "A curated lineup of the city's sharpest comedic voices and rising local talent.",
-        image: "https://images.unsplash.com/photo-1514525253361-bee8a48790c3?q=80&w=800&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&q=80&w=800",
         ticketLink: "#"
     },
     {
@@ -16,7 +16,7 @@ const UPCOMING_SHOWS = [
         title: "Headliner Series: Alex Carter",
         date: "Saturday, April 25 • 7:30 PM & 10:00 PM",
         description: "Direct from New York, Alex Carter brings his acclaimed national tour to The Houston Comedy Club stage.",
-        image: "https://images.unsplash.com/photo-1585699324551-f6c309eedee6?q=80&w=800&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=800",
         ticketLink: "#"
     },
     {
@@ -24,7 +24,7 @@ const UPCOMING_SHOWS = [
         title: "Experimental Night",
         date: "Wednesday, April 29 • 9:00 PM",
         description: "A raw, unfiltered night of new material and comedic risks from veteran performers.",
-        image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=800",
         ticketLink: "#"
     },
     {
@@ -32,7 +32,7 @@ const UPCOMING_SHOWS = [
         title: "Late Night Underground",
         date: "Thursday, April 30 • 10:30 PM",
         description: "The after-hours favorite. High energy, no filters, and secret drop-in guests.",
-        image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=800&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1585699324551-f6c309eedee6?auto=format&fit=crop&q=80&w=800",
         ticketLink: "#"
     }
 ];
