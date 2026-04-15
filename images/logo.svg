@@ -20,5 +20,5 @@
   <text x="100" y="65" class="logo-text" font-size="32" fill="#FFFFFF" letter-spacing="2">THE HOUSTON</text>
   
   <!-- "COMEDY CLUB" Text -->
-  <text x="355" y="65" class="logo-text" font-size="32" fill="url(#goldGradient)" letter-spacing="2">COMEDY CLUB</text>
+  <text x="355" y="65" class="logo-text" font-size="32" fill="#FFFFFF" letter-spacing="2">COMEDY CLUB</text>
 </svg>

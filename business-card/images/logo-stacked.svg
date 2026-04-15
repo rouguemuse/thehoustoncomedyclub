@@ -1,21 +1,20 @@
-<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-    <!-- REFINED COMPACT LOGO FOR BUSINESS CARDS -->
-    <g transform="translate(170, 10)">
-        <!-- Pill Mic Icon -->
-        <rect x="15" y="0" width="12" height="25" rx="6" fill="#FFFFFF" />
-        <path d="M10 15 C 10 28, 32 28, 32 15" stroke="#FFFFFF" stroke-width="2.5" fill="none" />
-        <rect x="20" y="27" width="2" height="6" fill="#FFFFFF" />
-        <rect x="17" y="33" width="8" height="1.5" fill="#FFFFFF" />
+<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+    <!-- MASTER STACKED LOGO - LARGE VIEWBOX TO PREVENT CLIPPING -->
+    <g transform="translate(300, 30)">
+        <rect x="-6" y="0" width="12" height="25" rx="6" fill="#FFFFFF" />
+        <path d="M-11 15 C -11 28, 11 28, 11 15" stroke="#FFFFFF" stroke-width="2.5" fill="none" />
+        <rect x="-1" y="27" width="2" height="6" fill="#FFFFFF" />
+        <rect x="-4" y="33" width="8" height="1.5" fill="#FFFFFF" />
     </g>
 
-    <g transform="translate(200, 110)" text-anchor="middle">
+    <g transform="translate(300, 130)" text-anchor="middle">
         <!-- THE HOUSTON -->
-        <text font-family="'Inter', sans-serif" font-weight="300" font-size="20" letter-spacing="0.35em" fill="#FFFFFF">THE HOUSTON</text>
+        <text font-family="'Inter', sans-serif" font-weight="300" font-size="24" letter-spacing="0.3em" fill="#FFFFFF">THE HOUSTON</text>
         
         <!-- COMEDY CLUB -->
-        <text y="55" font-family="'Archivo Narrow', sans-serif" font-weight="800" font-size="52" letter-spacing="0.02em" fill="#FFFFFF">COMEDY CLUB</text>
+        <text y="60" font-family="'Archivo Narrow', sans-serif" font-weight="800" font-size="62" letter-spacing="0.02em" fill="#FFFFFF">COMEDY CLUB</text>
         
         <!-- A Better Room for Comedy -->
-        <text y="90" font-family="'Playfair Display', serif" font-style="italic" font-size="18" letter-spacing="0.02em" fill="#FFFFFF" opacity="0.6">A Better Room for Comedy</text>
+        <text y="100" font-family="'Playfair Display', serif" font-style="italic" font-size="20" letter-spacing="0.05em" fill="#FFFFFF" opacity="0.6">A Better Room for Comedy</text>
     </g>
 </svg>

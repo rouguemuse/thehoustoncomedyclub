@@ -1,7 +1,9 @@
 :root {
-    --bg-dark: #000000;
-    --text-primary: #FFFFFF;
-    --text-secondary: #888888;
+    --bg-darker: #050505;
+    --bg-dark: #111111;
+    --text-pure: #FFFFFF;
+    --text-muted: #666666;
+    --accent-gray: #333333;
     --font-heading: 'Archivo Narrow', sans-serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -13,102 +15,125 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    font-family: var(--font-body);
 }
 
 .business-card {
-    width: 3.5in; /* True physical size for preview */
+    width: 3.5in;
     height: 2in;
-    background-color: #000;
+    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
     position: relative;
-    border: 1px solid #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0.2in;
     box-sizing: border-box;
+    display: flex;
+    padding: 0.12in;
+    zoom: 3;
     overflow: hidden;
-    zoom: 3; /* Scaled up for screen visibility */
+    color: var(--white);
+    box-shadow: 0 40px 100px rgba(0,0,0,0.8);
 }
 
-.card-face {
+/* Ornamental Border Box */
+.border-box {
     width: 100%;
     height: 100%;
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 0.1in;
+    box-sizing: border-box;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
-/* --- Branding Section --- */
-.branding-header {
-    width: 100%;
+/* --- Left Column: Logo --- */
+.logo-area {
+    width: 1.4in;
     display: flex;
     justify-content: center;
-    margin-top: 0.1in;
 }
 
-.main-logo-centered {
-    width: 2.2in; /* Fixed width relative to card size */
+.logo-main {
+    width: 100%;
     height: auto;
 }
 
-.white-divider {
-    width: 1.5in;
-    height: 1px;
-    background: #444;
-    margin: 0.1in 0;
-}
-
-/* --- Contact Section --- */
-.contact-details-centered {
-    width: 100%;
+/* --- Right Column: Structured Data --- */
+.data-area {
+    flex: 1;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    margin-bottom: 0.1in;
+    justify-content: space-between;
+    padding-left: 0.15in;
+    border-left: 1px solid rgba(255,255,255,0.05);
 }
 
-.contact-row-centered {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: baseline;
-    gap: 8px;
-}
-
-.label {
-    font-size: 6px;
-    font-family: var(--font-heading);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #666;
-}
-
-.value {
+.website-heading {
+    font-weight: 700;
     font-size: 8px;
-    font-family: var(--font-body);
-    font-weight: 400;
+    letter-spacing: 0.6px;
     color: #FFF;
+    margin-bottom: 2px;
 }
 
-/* Paper texture */
-.business-card::after {
+.contact-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4px;
+}
+
+.tag {
+    font-size: 4px;
+    font-family: var(--font-heading);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.info-text {
+    font-size: 6.5px;
+    color: #CCC;
+    font-weight: 300;
+}
+
+.footer-block {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 4px;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.highlight {
+    color: #FFF;
+    font-size: 7.5px;
+    font-weight: 400;
+}
+
+/* Subtle background mic silhouette */
+.business-card::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-image: url('https://www.transparenttextures.com/patterns/black-paper.png');
-    opacity: 0.2;
+    right: -20px;
+    bottom: -20px;
+    width: 1.5in;
+    height: 1.5in;
+    background: url('images/logo-stacked.svg') no-repeat center center;
+    background-size: contain;
+    opacity: 0.03;
     pointer-events: none;
 }
 
 @media print {
     body { background: white; zoom: 1; }
-    .business-card {
-        box-shadow: none;
+    .business-card { 
+        zoom: 1; 
+        box-shadow: none; 
         border: none;
-        margin: 0;
-        zoom: 1;
         -webkit-print-color-adjust: exact;
     }
 }
