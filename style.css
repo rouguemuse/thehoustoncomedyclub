@@ -116,9 +116,10 @@ nav {
     transition: var(--transition);
 }
 
-.logo-icon {
-    font-size: 1.5rem;
-    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4));
+.logo-mic {
+    height: 30px;
+    width: auto;
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4));
 }
 
 .logo-text {
