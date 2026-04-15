@@ -143,12 +143,12 @@ nav {
 
 .logo-text span {
     display: inline-block;
-    margin-left: 0.4rem;
-    font-family: var(--font-accent);
-    font-style: italic;
-    font-weight: 400;
-    font-size: 0.9em;
-    letter-spacing: 0.05em;
+    margin-left: 0.2rem;
+    font-family: var(--font-heading);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: 0.15em;
     background: var(--gold-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
