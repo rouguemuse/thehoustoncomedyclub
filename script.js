@@ -174,14 +174,18 @@ function initAnimations() {
         observer.observe(el);
     });
 
-    // Helper to trigger the animation
-    document.addEventListener('scroll', () => {
+    // Reveal logic to check visibility
+    const reveal = () => {
         revealElements.forEach(el => {
             const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight * 0.9) {
+            if (rect.top < window.innerHeight * 0.95) {
                 el.style.opacity = '1';
                 el.style.transform = 'translateY(0)';
             }
         });
-    });
+    };
+
+    // Initial check and scroll listener
+    reveal();
+    window.addEventListener('scroll', reveal);
 }
