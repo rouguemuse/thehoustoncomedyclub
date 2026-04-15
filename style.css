@@ -3,9 +3,9 @@
 :root {
     --bg-dark: #000000;
     --bg-card: #0a0a0a;
-    --accent: #FFD700; /* Vibrant Gold */
-    --accent-hover: #FFF3B0; /* Pale gold highlight */
-    --gold-gradient: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
+    --accent: #FFBF00; /* Richer Yellow-Gold */
+    --accent-hover: #FFD700;
+    --gold-gradient: linear-gradient(135deg, #FFBF00 0%, #D4AF37 100%);
     --text-primary: #FFFFFF;
     --text-secondary: #A0A09A;
     --neutral-border: #1a1a1a;
@@ -133,16 +133,16 @@ nav {
 }
 
 .logo-text span {
-    display: block;
+    display: inline-block;
+    margin-left: 0.4rem;
     font-family: var(--font-accent);
     font-style: italic;
     font-weight: 400;
-    font-size: 0.8em;
+    font-size: 0.9em;
     letter-spacing: 0.05em;
     background: var(--gold-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 0.1em;
 }
 
 .logo:hover {
@@ -212,7 +212,8 @@ nav {
     position: relative;
     z-index: 10;
     max-width: 900px;
-    margin-left: 2rem; /* Move slightly left */
+    margin-left: 0;
+    padding-left: 5%;
 }
 
 .hero h1 {
