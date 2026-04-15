@@ -1,46 +1,101 @@
-// Micro-animations and interactions for The Houston Comedy Club
+// Standard logic and premium interactions for The Houston Comedy Club
+
+// --- Configuration & Data ---
+// This array is ready to be replaced with a fetch() from a CMS or show populator API.
+const UPCOMING_SHOWS = [
+    {
+        id: 1,
+        title: "The Houston Showcase",
+        date: "Friday, April 24 • 8:00 PM",
+        description: "A curated lineup of the city's sharpest comedic voices and rising local talent.",
+        image: "https://images.unsplash.com/photo-1514525253361-bee8a48790c3?q=80&w=800&auto=format&fit=crop",
+        ticketLink: "#"
+    },
+    {
+        id: 2,
+        title: "Headliner Series: Alex Carter",
+        date: "Saturday, April 25 • 7:30 PM & 10:00 PM",
+        description: "Direct from New York, Alex Carter brings his acclaimed national tour to The Houston Comedy Club stage.",
+        image: "https://images.unsplash.com/photo-1585699324551-f6c309eedee6?q=80&w=800&auto=format&fit=crop",
+        ticketLink: "#"
+    },
+    {
+        id: 3,
+        title: "Experimental Night",
+        date: "Wednesday, April 29 • 9:00 PM",
+        description: "A raw, unfiltered night of new material and comedic risks from veteran performers.",
+        image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800&auto=format&fit=crop",
+        ticketLink: "#"
+    },
+    {
+        id: 4,
+        title: "Late Night Underground",
+        date: "Thursday, April 30 • 10:30 PM",
+        description: "The after-hours favorite. High energy, no filters, and secret drop-in guests.",
+        image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=800&auto=format&fit=crop",
+        ticketLink: "#"
+    }
+];
+
+// Fallback image for any broken links
+const PLACEHOLDER_IMAGE = "https://images.unsplash.com/photo-1485872233828-a2f7c46002bb?q=80&w=800&auto=format&fit=crop";
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Navbar scroll effect
+    initShows();
+    initAnimations();
+    initNavbar();
+    initEmailSignup();
+    initSmoothScroll();
+});
+
+// --- Show Population ---
+function initShows() {
+    const container = document.getElementById('shows-container');
+    if (!container) return;
+
+    // Clear loading state
+    container.innerHTML = '';
+
+    UPCOMING_SHOWS.forEach(show => {
+        const showElement = document.createElement('article');
+        showElement.className = 'show-card';
+        showElement.innerHTML = `
+            <div class="show-img">
+                <img src="${show.image}" alt="${show.title}" onerror="this.src='${PLACEHOLDER_IMAGE}'">
+            </div>
+            <div class="show-info">
+                <p class="show-date">${show.date}</p>
+                <h3 class="show-title">${show.title}</h3>
+                <p class="show-desc">${show.description}</p>
+                <a href="${show.ticketLink}" class="btn btn-primary" style="width: 100%; text-align: center;">Get Tickets</a>
+            </div>
+        `;
+        container.appendChild(showElement);
+    });
+}
+
+// --- Navigation Logic ---
+function initNavbar() {
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             nav.style.padding = '1rem 0';
-            nav.style.background = 'rgba(10, 10, 10, 0.95)';
+            nav.style.background = 'rgba(10, 10, 10, 0.98)';
         } else {
-            nav.style.padding = '2rem 0';
+            nav.style.padding = '1.5rem 0';
             nav.style.background = 'linear-gradient(to bottom, rgba(10,10,10,0.8), transparent)';
         }
     });
+}
 
-    // Reveal elements on scroll
-    const revealElements = document.querySelectorAll('.show-card, .weekly-item, .text-reveal, .image-box');
-    
-    const revealOnScroll = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                revealOnScroll.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    revealElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-        revealOnScroll.observe(el);
-    });
-
-    // Smooth scroll for nav links
+// --- Smooth Scroll ---
+function initSmoothScroll() {
     document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            if (this.getAttribute('href').startsWith('#')) {
+            const href = this.getAttribute('href');
+            if (href.startsWith('#')) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const target = document.querySelector(href);
                 if (target) {
                     window.scrollTo({
                         top: target.offsetTop - 80,
@@ -50,23 +105,82 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+}
 
-    // Form submission simulation
+// --- Email Integration Spot ---
+function initEmailSignup() {
     const signupForm = document.querySelector('.form-group');
-    if (signupForm) {
-        signupForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = signupForm.querySelector('input').value;
-            const button = signupForm.querySelector('button');
+    if (!signupForm) return;
+
+    signupForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const emailInput = signupForm.querySelector('input');
+        const submitBtn = signupForm.querySelector('button');
+        const email = emailInput.value;
+
+        // Visual feedback
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Joining...';
+
+        try {
+            /* 
+               INTEGRATION NOTE:
+               Replace this block with your actual email list API call (Mailchimp, ConvertKit, etc.)
+               
+               Example:
+               await fetch('YOUR_API_ENDPOINT', {
+                   method: 'POST',
+                   body: JSON.stringify({ email: email })
+               });
+            */
             
-            button.textContent = 'Welcome aboard';
-            button.style.backgroundColor = '#2ecc71';
-            button.style.color = '#fff';
-            button.style.borderColor = '#2ecc71';
-            signupForm.querySelector('input').value = '';
-            signupForm.querySelector('input').disabled = true;
-            
-            console.log(`Signed up: ${email}`);
+            // Simulating API latency
+            await new Promise(resolve => setTimeout(resolve, 1000));
+
+            submitBtn.textContent = 'Welcome Aboard';
+            submitBtn.style.backgroundColor = '#2ecc71';
+            submitBtn.style.border = '1px solid #2ecc71';
+            emailInput.value = '';
+            emailInput.disabled = true;
+        } catch (error) {
+            console.error('Email signup error:', error);
+            submitBtn.textContent = 'Try Again';
+            submitBtn.disabled = false;
+        }
+    });
+}
+
+// --- Animations ---
+function initAnimations() {
+    const revealElements = document.querySelectorAll('.show-card, .weekly-item, .text-reveal, .image-box, .section-header');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
         });
-    }
-});
+    }, { threshold: 0.1 });
+
+    revealElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+        
+        // Use a class for the active state to keep it clean
+        // We'll define simple active styles here via JS if needed, or stick to inline
+        observer.observe(el);
+    });
+
+    // Helper to trigger the animation
+    document.addEventListener('scroll', () => {
+        revealElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.9) {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            }
+        });
+    });
+}

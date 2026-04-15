@@ -151,13 +151,14 @@ nav {
 }
 
 .hero h1 {
-    font-size: clamp(3rem, 8vw, 5rem);
+    font-size: clamp(2.5rem, 10vw, 5rem);
     margin-bottom: 1.5rem;
     font-weight: 400;
+    line-height: 1.05;
 }
 
 .hero p {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     color: var(--text-secondary);
     margin-bottom: 2.5rem;
     max-width: 500px;
@@ -166,20 +167,22 @@ nav {
 
 .btn-group {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .btn {
     display: inline-block;
-    padding: 1rem 2.5rem;
+    padding: 0.9rem 2.2rem;
     font-family: var(--font-heading);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    border-radius: 2px;
+    border-radius: 1px;
     cursor: pointer;
     transition: var(--transition);
+    text-align: center;
 }
 
 .btn-primary {
@@ -205,13 +208,13 @@ nav {
 
 /* --- Sections --- */
 .section-header {
-    margin-bottom: 4rem;
-    text-align: center;
+    margin-bottom: 3.5rem;
+    text-align: left;
 }
 
 .section-header h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin-bottom: 0.75rem;
 }
 
 .section-tag {
@@ -443,6 +446,7 @@ footer {
 @media (max-width: 992px) {
     .split-section {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
     .footer-grid {
@@ -451,20 +455,42 @@ footer {
 }
 
 @media (max-width: 768px) {
+    nav {
+        padding: 1.5rem 0;
+    }
+
     .nav-links {
         display: none;
     }
     
     section {
-        padding: 4rem 0;
+        padding: 5rem 0;
     }
     
+    .hero {
+        height: auto;
+        padding: 8rem 0 5rem 0;
+    }
+
     .hero h1 {
         font-size: 3rem;
+    }
+
+    .shows-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .weekly-name {
+        font-size: 1.15rem;
+    }
+
+    .weekly-item {
+        padding: 1.5rem 0;
     }
     
     .footer-grid {
         grid-template-columns: 1fr;
+        gap: 2.5rem;
     }
     
     .form-group {
@@ -475,4 +501,10 @@ footer {
     .form-group input {
         width: 100%;
     }
+
+    .btn {
+        width: 100%;
+        padding: 1.1rem;
+    }
 }
+
