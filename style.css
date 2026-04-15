@@ -3,9 +3,9 @@
 :root {
     --bg-dark: #000000;
     --bg-card: #0a0a0a;
-    --accent: #FFBF00; /* Richer Yellow-Gold */
-    --accent-hover: #FFD700;
-    --gold-gradient: linear-gradient(135deg, #FFBF00 0%, #D4AF37 100%);
+    --accent: #D4AF37; /* Elegant Metallic Gold */
+    --accent-hover: #E8D082;
+    --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #996515 100%);
     --text-primary: #FFFFFF;
     --text-secondary: #A0A09A;
     --neutral-border: #1a1a1a;
