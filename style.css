@@ -214,22 +214,22 @@ nav {
 }
 
 .hero h1 {
-    font-size: clamp(3rem, 12vw, 6.5rem);
+    font-size: clamp(3rem, 10vw, 5rem);
     margin-bottom: 2rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 0.95;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
 }
 
 .hero h1 span {
     font-family: var(--font-accent);
     font-style: italic;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--accent); /* Back to Gold */
     display: block;
-    font-size: 0.75em;
-    margin-top: -0.1em;
-    letter-spacing: 0em;
+    font-size: 0.55em;
+    margin-top: 0.1em;
+    letter-spacing: 0.02em;
     opacity: 1;
 }
 
