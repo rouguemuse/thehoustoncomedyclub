@@ -80,10 +80,10 @@ function initNavbar() {
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             nav.style.padding = '1rem 0';
-            nav.style.background = 'rgba(10, 10, 10, 0.98)';
+            nav.style.background = 'rgba(0, 0, 0, 0.98)';
         } else {
             nav.style.padding = '1.5rem 0';
-            nav.style.background = 'linear-gradient(to bottom, rgba(10,10,10,0.8), transparent)';
+            nav.style.background = 'linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.0))';
         }
     });
 }
@@ -138,8 +138,9 @@ function initEmailSignup() {
             await new Promise(resolve => setTimeout(resolve, 1000));
 
             submitBtn.textContent = 'Welcome Aboard';
-            submitBtn.style.backgroundColor = '#2ecc71';
-            submitBtn.style.border = '1px solid #2ecc71';
+            submitBtn.style.backgroundColor = 'var(--accent)';
+            submitBtn.style.color = '#000';
+            submitBtn.style.border = '1px solid var(--accent)';
             emailInput.value = '';
             emailInput.disabled = true;
         } catch (error) {
