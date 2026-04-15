@@ -1,4 +1,4 @@
-<svg width="500" height="100" viewBox="0 0 500 100" xmlns="http://www.w3.org/2000/svg">
+<svg width="650" height="100" viewBox="0 0 650 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#FFBF00;stop-opacity:1" />
@@ -17,8 +17,8 @@
   </g>
   
   <!-- "THE HOUSTON" Text -->
-  <text x="100" y="65" class="logo-text" font-size="32" fill="#FFFFFF" letter-spacing="3">THE HOUSTON</text>
+  <text x="100" y="65" class="logo-text" font-size="32" fill="#FFFFFF" letter-spacing="2">THE HOUSTON</text>
   
   <!-- "COMEDY CLUB" Text -->
-  <text x="365" y="65" class="logo-text" font-size="32" fill="url(#goldGradient)" letter-spacing="3">COMEDY CLUB</text>
+  <text x="355" y="65" class="logo-text" font-size="32" fill="url(#goldGradient)" letter-spacing="2">COMEDY CLUB</text>
 </svg>
