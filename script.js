@@ -1,4 +1,4 @@
-// Micro-animations and interactions for Houston Comedy Club
+// Micro-animations and interactions for The Houston Comedy Club
 
 document.addEventListener('DOMContentLoaded', () => {
     // Navbar scroll effect
