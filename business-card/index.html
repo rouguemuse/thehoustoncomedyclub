@@ -3,48 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Houston Comedy Club - Premium Business Card</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Inter:wght@300;400;700&family=Playfair+Display:ital@1&display=swap">
+    <title>The Houston Comedy Club | Double-Sided Business Card</title>
+    <link rel="stylesheet" href="card-styles.css">
 </head>
-<body>
+<body class="two-sided-view">
 
-    <div class="business-card">
-        <div class="border-box">
-            
-            <!-- Branding Area (Left) -->
-            <div class="logo-area">
-                <img src="images/logo-stacked.svg" alt="Branding" class="logo-main">
+    <div class="card-wrapper">
+        <!-- SIDE 1: FRONT (MAJOR BRANDING) -->
+        <div class="business-card front-face">
+            <div class="card-interior logo-focus">
+                <img src="images/logo-horizontal-heavy.svg" alt="The Houston Comedy Club Logo" class="logo-centerpiece title-logo">
             </div>
+        </div>
 
-            <!-- Content Area (Right) -->
-            <div class="data-area">
+        <!-- SIDE 2: BACK (INFORMATION) -->
+        <div class="business-card back-face">
+            <div class="card-interior info-layout">
+                <div class="back-accent"></div>
                 
-                <div class="website-heading">thehoustoncomedyclub.com</div>
+                <header class="card-header">
+                    <h1 class="brand-title">THE HOUSTON <br>COMEDY CLUB</h1>
+                    <p class="brand-subtitle">A Better Room for Comedy</p>
+                </header>
 
-                <div class="contact-row">
-                    <span class="tag">Inquiries</span>
-                    <span class="info-text">info@thehoustoncomedyclub.com</span>
-                </div>
-
-                <div class="contact-row">
-                    <span class="tag">Bookings</span>
-                    <span class="info-text">bookings@thehoustoncomedyclub.com</span>
-                </div>
-
-                <div class="footer-block">
-                    <div class="detail">
-                        <span class="tag">Phone</span>
-                        <span class="info-text highlight">281.797.1396</span>
+                <div class="info-columns">
+                    <div class="info-col location">
+                        <h2 class="section-label">Location</h2>
+                        <address class="card-value">2020 Waugh Dr<br>Houston, TX 77006</address>
+                        <p class="card-value phone">281.797.1396</p>
                     </div>
-                    <div class="detail" style="text-align: right;">
-                        <span class="tag">Address</span>
-                        <span class="info-text highlight">2020 Waugh Dr<br>Houston, TX</span>
+
+                    <div class="info-col connectivity">
+                        <h2 class="section-label">Digital</h2>
+                        <p class="card-value web">thehoustoncomedyclub.com</p>
+                        <div class="email-stack">
+                            <p class="email-entry"><span class="small-label">Info:</span> info@thehoustoncomedyclub.com</p>
+                            <p class="email-entry"><span class="small-label">Book:</span> bookings@thehoustoncomedyclub.com</p>
+                        </div>
                     </div>
                 </div>
 
+                <footer class="card-footer-branding">
+                    <span class="location-stamp">Est. Houston, Texas</span>
+                </footer>
             </div>
-
         </div>
     </div>
 

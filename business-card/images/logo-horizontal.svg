@@ -7,11 +7,17 @@
         <rect x="20" y="27" width="2" height="6" fill="#FFFFFF" />
     </g>
 
+    <defs>
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@700&amp;family=Outfit:wght@300&amp;display=swap');
+        </style>
+    </defs>
+
     <!-- Text Section using spans for perfect flow -->
     <g transform="translate(100, 52)">
-        <text font-family="'Inter', sans-serif" font-size="28" fill="#FFFFFF">
-            <tspan font-weight="300" letter-spacing="0.2em">THE HOUSTON </tspan>
-            <tspan font-family="'Archivo Narrow', sans-serif" font-weight="800" letter-spacing="0.05em">COMEDY CLUB</tspan>
+        <text fill="#FFFFFF">
+            <tspan font-family="'Outfit', sans-serif" font-weight="300" font-size="24" letter-spacing="0.25em">THE HOUSTON </tspan>
+            <tspan font-family="'Antonio', sans-serif" font-weight="700" font-size="36" letter-spacing="0.1em">COMEDY CLUB</tspan>
         </text>
     </g>
 </svg>
